@@ -652,7 +652,7 @@ img { max-width: 100%; display: block; }
 .home-news .news-card p { font-size: 1em; margin-bottom: auto; }
 .home-news .news-card .btn-small { margin: 17px auto 0 auto; align-self: center; }
 
-/* LIÊN HỆ: GRID LAYOUT */
+/* LIÊN HỆ GRID 2x2: THÔNG TIN | MAP | FORM TRẢI DƯỚI */
 .contact-section {
   margin: 40px 0 0 0;
 }
@@ -669,12 +669,14 @@ img { max-width: 100%; display: block; }
 .contact-main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
+  grid-template-rows: auto auto;
+  grid-template-areas: 
     "info map"
     "form form";
   gap: 28px 32px;
   margin-bottom: 32px;
   width: 100%;
+  align-items: start;
 }
 .contact-info-box {
   grid-area: info;
@@ -683,6 +685,7 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow,0 2px 14px rgba(25,77,11,0.08));
   padding: 18px 20px;
   font-size: 1em;
+  min-width: 240px;
 }
 .contact-map {
   grid-area: map;
@@ -695,6 +698,7 @@ img { max-width: 100%; display: block; }
   width: 100%;
   overflow: hidden;
   display: flex;
+  min-width: 240px;
 }
 .contact-map iframe {
   width: 100%;
@@ -847,17 +851,17 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .home-about .container { flex-direction: column; gap: 30px; }
   .contact-main-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "info"
       "map"
       "form";
     gap: 18px;
   }
-  .contact-info-box,
-  .contact-map,
-  .contact-form-wrap {
+  .contact-info-box, .contact-map, .contact-form-wrap {
     max-width: 100vw;
     width: 100%;
+    min-width: unset;
   }
   .contact-map { height: 140px; min-height: 100px; }
 }
