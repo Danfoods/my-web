@@ -6,6 +6,8 @@
   --red: #d32f2f;
   --main-bg: #fff;
   --section-bg: #fafaf8;
+  --border-radius: 14px;
+  --shadow: 0 2px 14px rgba(25,77,11,0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -196,7 +198,7 @@ img { max-width: 100%; display: block; }
 .product-card {
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 2px 14px rgba(25,77,11,0.08);
+  box-shadow: var(--shadow);
   padding: 22px 14px 24px 14px;
   width: 220px;
   text-align: center;
@@ -254,7 +256,70 @@ img { max-width: 100%; display: block; }
   .product-card { width: 47vw; min-width: 130px; }
 }
 
-/* ABOUT PAGE: 2 cột chữ/hình */
+/* TRANG SẢN PHẨM - DANH MỤC & SECTION */
+.product-category-banner {
+  margin: 35px 0 0 0;
+}
+.product-banner-img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  display: block;
+  margin-bottom: 32px;
+  min-height: 220px;
+  max-height: 330px;
+}
+.product-section {
+  margin: 0 0 40px 0;
+}
+.product-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 12px 0;
+  gap: 14px;
+}
+.product-section-title {
+  font-size: 1.5em;
+  color: var(--main-green);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--main-green);
+  display: inline-block;
+  text-transform: uppercase;
+}
+.product-section-more {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 1.08em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+  margin-bottom: 2px;
+}
+.product-section-more:hover { color: #900; }
+.product-list-5 {
+  display: flex;
+  gap: 22px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+}
+.product-list-5 .product-card {
+  width: 185px;
+  min-width: 185px;
+  padding: 16px 10px 18px 10px;
+  border-radius: var(--border-radius);
+}
+
+/* VỀ ĐAN FOODS: 2 cột chữ/hình */
 .about-hero .section-title {
   margin-bottom: 0;
   margin-top: 45px;
@@ -442,10 +507,16 @@ section { background: none; box-shadow: none; padding: 0; border-radius: 0; }
 h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .product-list, .news-list-full, .home-news .news-list { gap: 16px; }
+  .footer-container { gap: 18px; }
+}
 @media (max-width: 1100px) {
   .about-main-flex { flex-direction: column; gap: 28px; }
   .about-main-image { max-width: 98vw; }
   .about-why-grid { grid-template-columns: 1fr 1fr; }
+  .product-list-5 { gap: 13px; }
+  .product-card { width: 23vw; min-width: 120px; }
 }
 @media (max-width: 900px) {
   .header-top-flex { flex-direction: column; gap: 8px; }
@@ -459,9 +530,11 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .home-about .container { flex-direction: column; gap: 30px; }
 }
 @media (max-width: 750px) {
+  .product-banner-img { min-height: 140px; max-height: 200px; }
   .about-main-image img { max-width: 95vw; }
   .about-why-grid { grid-template-columns: 1fr; }
   .why-box { min-height: unset; }
+  .product-card { width: 37vw; min-width: 100px; }
 }
 @media (max-width: 600px) {
   .container { width: 99%; }
@@ -474,4 +547,7 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .about-img img { max-width: 95vw; }
   .about-main-content { font-size: 1em; }
   .about-hero .section-title { font-size: 1.3em; }
+  .product-card { width: 70vw; min-width: 70vw; max-width: 80vw; }
+  .product-list-5 { gap: 7px; }
+  .product-section-title { font-size: 1.1em; }
 }
