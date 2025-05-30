@@ -266,43 +266,58 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
   object-fit: cover;
   display: block;
-  margin-bottom: 32px;
-  min-height: 220px;
-  max-height: 330px;
+  margin-bottom: 28px;
+  min-height: 140px;
+  max-height: 220px;
+  height: 23vw;
+  /* Đảm bảo ảnh không bị méo */
 }
+
+/* Section Title + Link "Xem thêm" trên cùng dòng */
 .product-section {
   margin: 0 0 40px 0;
 }
 .product-section-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 0 12px 0;
+  margin: 0 0 0 0;
+  padding: 0 0 10px 0;
   gap: 14px;
 }
 .product-section-title {
-  font-size: 1.5em;
+  font-size: 1.35em;
   color: var(--main-green);
   font-weight: bold;
   letter-spacing: 0.02em;
   margin: 0;
-  padding-bottom: 6px;
-  border-bottom: 3px solid var(--main-green);
-  display: inline-block;
   text-transform: uppercase;
+  padding: 0;
+  border: none;
 }
 .product-section-more {
-  color: var(--red);
-  font-weight: 600;
-  font-size: 1.08em;
+  color: var(--main-green);
+  font-weight: 500;
+  font-size: 1em;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  display: block;
   transition: color 0.2s;
-  margin-bottom: 2px;
+  margin: 0 0 0 16px;
+  white-space: nowrap;
 }
-.product-section-more:hover { color: #900; }
+.product-section-more:hover { color: var(--red); }
+
+/* Gạch ngang chia tiêu đề & sản phẩm */
+.product-section-divider {
+  width: 100%;
+  height: 2.5px;
+  background: #e5e5e5;
+  border: none;
+  margin: 8px 0 22px 0;
+  display: block;
+}
+
+/* Danh sách sản phẩm 5/cột */
 .product-list-5 {
   display: flex;
   gap: 22px;
@@ -317,6 +332,24 @@ img { max-width: 100%; display: block; }
   min-width: 185px;
   padding: 16px 10px 18px 10px;
   border-radius: var(--border-radius);
+}
+.product-card img {
+  width: 100%;
+  min-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto 12px auto;
+  background: #f0f0e0;
+  border: 1.5px solid #eee;
+}
+.product-card h3 {
+  margin: 0;
+  color: var(--main-green);
+  font-size: 1.07em;
+  font-weight: 700;
+  text-align: center;
+  white-space: pre-line;
 }
 
 /* VỀ ĐAN FOODS: 2 cột chữ/hình */
@@ -530,7 +563,7 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .home-about .container { flex-direction: column; gap: 30px; }
 }
 @media (max-width: 750px) {
-  .product-banner-img { min-height: 140px; max-height: 200px; }
+  .product-banner-img { min-height: 90px; max-height: 130px; height: 18vw; }
   .about-main-image img { max-width: 95vw; }
   .about-why-grid { grid-template-columns: 1fr; }
   .why-box { min-height: unset; }
@@ -549,5 +582,5 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .about-hero .section-title { font-size: 1.3em; }
   .product-card { width: 70vw; min-width: 70vw; max-width: 80vw; }
   .product-list-5 { gap: 7px; }
-  .product-section-title { font-size: 1.1em; }
+  .product-section-title { font-size: 1em; }
 }
