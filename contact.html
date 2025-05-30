@@ -49,41 +49,41 @@
         <h1>Liên hệ</h1>
       </div>
     </section>
-    <section class="contact-main">
-      <div class="container flex-between">
-        <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p><strong>Địa chỉ:</strong> 4/5A liên khu 5-6, Bình Hưng Hoà B, Bình Tân, TP.HCM</p>
-          <p><strong>Hotline:</strong> 0908 352 254 - 0906 628 259</p>
-          <p><strong>Email:</strong> sales@đanfoods.com</p>
-          <h3>Kết nối với chúng tôi</h3>
-          <p>
-            <a href="https://www.facebook.com/danfoods" target="_blank">Facebook</a> |
-            <a href="https://zalo.me/0908352254" target="_blank">Zalo</a>
-          </p>
-        </div>
-        <div class="contact-form">
-          <h2>Gửi liên hệ</h2>
-          <form id="contactForm">
-            <label for="name">Họ và tên:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="phone">Số điện thoại:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Nội dung:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Gửi liên hệ</button>
-          </form>
-          <div id="formResult"></div>
-        </div>
-        <div class="container">
-      <div class="contact-map">
-        <!-- Thay đoạn src bên dưới bằng địa chỉ của bạn -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2823859320415!2d106.59197847485719!3d10.789670689359918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752da6012ff0cf%3A0xfda5975de98cbbfc!2s%C4%90AN%20FOODS!5e0!3m2!1svi!2s!4v1748490589986!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      </div>
-    </section>
+   <section class="contact-section container">
+  <div class="contact-title">Liên hệ với chúng tôi</div>
+  <div class="contact-main-grid">
+    <div class="contact-info-box">
+      <div class="contact-info-title">Thông tin liên hệ</div>
+      <ul class="contact-info-list">
+        <li><span class="contact-icon"><i>📍</i></span> <b>Địa chỉ</b><br>4/5A Liên khu 5,6, Bình Hưng Hoà B, Bình Tân, TPHCM</li>
+        <li><span class="contact-icon"><i>📞</i></span> <b>Điện thoại</b><br>0998 352 254</li>
+        <li><span class="contact-icon"><i>✉️</i></span> <b>Email</b><br>sales@danfoods.com</li>
+        <li><span class="contact-icon"><i>⏰</i></span> <b>Giờ làm việc</b><br>Thứ 2 - Thứ 7: 8h - 18h<br>Chủ nhật: 8h - 12h</li>
+      </ul>
+    </div>
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <form class="contact-form contact-form-wrap">
+    <div class="contact-form-title">Gửi yêu cầu tư vấn</div>
+    <label for="name">Họ và tên *</label>
+    <input id="name" name="name" type="text" required>
+    <label for="phone">Số điện thoại *</label>
+    <input id="phone" name="phone" type="text" required>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email">
+    <label for="topic">Chủ đề</label>
+    <select id="topic" name="topic">
+      <option value="tu-van">Tư vấn sản phẩm</option>
+      <option value="bao-gia">Báo giá</option>
+      <option value="khac">Khác</option>
+    </select>
+    <label for="note">Nội dung *</label>
+    <textarea id="note" name="note" required></textarea>
+    <button type="submit" class="btn-submit">Gửi yêu cầu</button>
+  </form>
+</section>
   </main>
   <footer>
   <div class="footer-container">
