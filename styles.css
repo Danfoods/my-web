@@ -713,10 +713,21 @@ img { max-width: 100%; display: block; }
   padding: 18px 20px;
   font-size: 1em;
   min-width: 220px;
+  min-height: 300px;
   align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+}
+.contact-info-list {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+  font-size: 1.08em;
+  line-height: 1.8;
+}
+.contact-info-list li {
+  margin-bottom: 12px;
+}
+.contact-info-list li:last-child {
+  margin-bottom: 0;
 }
 .contact-map {
   background: #eee;
@@ -725,7 +736,7 @@ img { max-width: 100%; display: block; }
   border: 1.5px solid #f4f4f4;
   min-height: 180px;
   height: 100%;
-  max-height: 250px;
+  max-height: 350px;
   width: 100%;
   overflow: hidden;
   display: flex;
