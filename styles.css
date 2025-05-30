@@ -655,6 +655,8 @@ img { max-width: 100%; display: block; }
 /* LIÊN HỆ GRID 2x2: THÔNG TIN | MAP | FORM TRẢI DƯỚI */
 .contact-section {
   margin: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
 }
 .contact-title {
   font-size: 1.18em;
@@ -676,7 +678,8 @@ img { max-width: 100%; display: block; }
   gap: 28px 32px;
   margin-bottom: 32px;
   width: 100%;
-  align-items: start;
+  max-width: 1000px;         /* căn giữa và giới hạn bề ngang */
+  background: transparent;
 }
 .contact-info-box {
   grid-area: info;
