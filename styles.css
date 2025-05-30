@@ -6,6 +6,7 @@
   --red: #d32f2f;
   --main-bg: #fff;
   --section-bg: #fafaf8;
+  --pink: #e64894;
   --border-radius: 14px;
   --shadow: 0 2px 14px rgba(25,77,11,0.08);
 }
@@ -270,10 +271,7 @@ img { max-width: 100%; display: block; }
   min-height: 140px;
   max-height: 220px;
   height: 23vw;
-  /* Đảm bảo ảnh không bị méo */
 }
-
-/* Section Title + Link "Xem thêm" trên cùng dòng */
 .product-section {
   margin: 0 0 40px 0;
 }
@@ -306,8 +304,6 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 .product-section-more:hover { color: var(--red); }
-
-/* Gạch ngang chia tiêu đề & sản phẩm */
 .product-section-divider {
   width: 100%;
   height: 2.5px;
@@ -316,8 +312,6 @@ img { max-width: 100%; display: block; }
   margin: 8px 0 22px 0;
   display: block;
 }
-
-/* Danh sách sản phẩm 5/cột */
 .product-list-5 {
   display: flex;
   gap: 22px;
@@ -460,6 +454,168 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
+/* TIN TỨC 2 CỘT */
+.news-page-wrap {
+  display: flex;
+  gap: 42px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 38px auto 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+.news-main-col {
+  flex: 2 1 0%;
+  min-width: 0;
+}
+.news-sidebar-col {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.news-page-title {
+  color: var(--pink);
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 34px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-align: left;
+}
+.news-article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.news-article-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 16px rgba(50,50,50,0.12);
+  padding: 28px 32px 22px 32px;
+  margin-bottom: 0;
+  border: 1px solid #f4f4f4;
+  transition: box-shadow 0.2s;
+}
+.news-article-card:hover {
+  box-shadow: 0 4px 18px rgba(70,120,40,0.18);
+}
+.news-article-title {
+  font-size: 1.7em;
+  color: var(--main-green);
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: left;
+  line-height: 1.17;
+}
+.news-article-date {
+  color: #888;
+  font-size: 1em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.news-article-date:after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #dadada;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.news-article-desc {
+  color: #444;
+  font-size: 1.12em;
+  margin-top: 5px;
+}
+.news-sidebar-image {
+  border-radius: var(--border-radius);
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.news-sidebar-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  display: block;
+  min-height: 90px;
+  max-height: 170px;
+}
+.news-sidebar-box {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 10px rgba(40,90,20,0.09);
+  border: 1.5px solid #e5e5e5;
+  padding: 0 0 16px 0;
+  overflow: hidden;
+}
+.news-sidebar-title {
+  background: var(--main-green);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.13em;
+  padding: 13px 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.news-sidebar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 13px 0 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.news-sidebar-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 14px 0 14px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.news-sidebar-item:last-child { border-bottom: none; }
+.news-sidebar-date {
+  background: #fff;
+  color: var(--main-green);
+  border: 2px solid var(--main-green);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.04em;
+  margin-top: 2px;
+  flex-shrink: 0;
+  line-height: 1.1;
+}
+.news-sidebar-date span {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #999;
+  display: block;
+}
+.news-sidebar-link {
+  color: var(--main-dark);
+  font-size: 1.09em;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.25;
+  transition: color 0.18s;
+  display: block;
+}
+.news-sidebar-link:hover {
+  color: var(--main-green);
+}
+
 /* TIN TỨC TRANG CHỦ */
 .home-news {
   background: var(--section-bg);
@@ -550,6 +706,8 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .about-why-grid { grid-template-columns: 1fr 1fr; }
   .product-list-5 { gap: 13px; }
   .product-card { width: 23vw; min-width: 120px; }
+  .news-page-wrap { flex-direction: column; gap: 38px; }
+  .news-sidebar-col { max-width: 100vw; }
 }
 @media (max-width: 900px) {
   .header-top-flex { flex-direction: column; gap: 8px; }
@@ -562,11 +720,14 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .about-why-grid { grid-template-columns: 1fr; }
   .home-about .container { flex-direction: column; gap: 30px; }
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
+  .news-page-wrap { flex-direction: column; gap: 30px; }
+  .news-main-col { width: 100%; }
+  .news-sidebar-col { max-width: 100vw; }
+  .news-article-card { padding: 18px 10px 18px 13px; }
+  .news-article-title { font-size: 1.18em; }
+  .news-sidebar-box { padding: 0 0 4px 0; }
   .product-banner-img { min-height: 90px; max-height: 130px; height: 18vw; }
-  .about-main-image img { max-width: 95vw; }
-  .about-why-grid { grid-template-columns: 1fr; }
-  .why-box { min-height: unset; }
   .product-card { width: 37vw; min-width: 100px; }
 }
 @media (max-width: 600px) {
@@ -583,4 +744,9 @@ h2, h3 { color: var(--main-green); margin-bottom: 23px; text-align: center; }
   .product-card { width: 70vw; min-width: 70vw; max-width: 80vw; }
   .product-list-5 { gap: 7px; }
   .product-section-title { font-size: 1em; }
+  .news-page-title { font-size: 1.15em; margin-bottom: 18px; }
+  .news-page-wrap { gap: 16px; }
+  .news-article-title { font-size: 1em; }
+  .news-sidebar-title { font-size: 1em; padding: 10px 10px; }
+  .news-sidebar-date { width: 34px; height: 34px; font-size: 0.93em; }
 }
