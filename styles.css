@@ -697,7 +697,7 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow,0 2px 14px rgba(25,77,11,0.08));
   border: 1.5px solid #f4f4f4;
   min-height: 180px;
-  height: 180px;
+  height: 250px;
   width: 100%;
   overflow: hidden;
   display: flex;
